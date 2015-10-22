@@ -53,7 +53,6 @@ extern NSString * const OEDBSystemsDidChangeNotification;
 NSString * const OESidebarSelectionDidChangeNotificationName = @"OESidebarSelectionDidChange";
 
 NSString * const OESidebarGroupConsolesAutosaveName    = @"sidebarConsolesItem";
-NSString * const OESidebarGroupMediaAutosaveName       = @"sidebarMediaItem";
 NSString * const OESidebarGroupDevicesAutosaveName     = @"sidebarDevicesItem";
 NSString * const OESidebarGroupCollectionsAutosaveName = @"sidebarCollectionsItem";
 
@@ -68,7 +67,6 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
 @property (strong, readwrite) NSArray *groups;
 @property (strong, readwrite) NSArray *systems;
 @property (strong, readwrite) NSArray *collections;
-@property (strong, readwrite) NSArray *media;
 @end
 
 @implementation OESidebarController
@@ -81,22 +79,24 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
     if (self != [OESidebarController class])
         return;
 
-    [[NSUserDefaults standardUserDefaults] registerDefaults:(@{
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{
                                                              OESidebarGroupConsolesAutosaveName    : @YES,
                                                              OESidebarGroupCollectionsAutosaveName : @YES,
-                                                             })];
+                                                             }];
+}
+
+- (NSString*)nibName {
+    return @"OESidebarController";
 }
 
 - (void)awakeFromNib
 {
     self.groups = @[
-                    [OESidebarGroupItem groupItemWithName:NSLocalizedString(@"CONSOLES", @"") autosaveName:OESidebarGroupConsolesAutosaveName],
+                    [OESidebarGroupItem groupItemWithName:NSLocalizedString(@"Consoles", @"") autosaveName:OESidebarGroupConsolesAutosaveName],
 
 #define DevicesSectionIndex 1 // keep track of devices section index so we can skip it if no devices are connected
-                    [OESidebarGroupItem groupItemWithName:NSLocalizedString(@"DEVICES", @"") autosaveName:OESidebarGroupDevicesAutosaveName],
-
-                    [OESidebarGroupItem groupItemWithName:NSLocalizedString(@"MEDIA", @"") autosaveName:OESidebarGroupMediaAutosaveName],
-                    [OESidebarGroupItem groupItemWithName:NSLocalizedString(@"COLLECTIONS", @"") autosaveName:OESidebarGroupCollectionsAutosaveName]
+                    [OESidebarGroupItem groupItemWithName:NSLocalizedString(@"Devices", @"") autosaveName:OESidebarGroupDevicesAutosaveName],
+                    [OESidebarGroupItem groupItemWithName:NSLocalizedString(@"Collections", @"") autosaveName:OESidebarGroupCollectionsAutosaveName]
                     ];
 
     OESidebarOutlineView *sidebarView = (OESidebarOutlineView*)[self view];
@@ -187,13 +187,7 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
             collectionItem = [[self collections] firstObjectMatchingBlock:
                               ^ BOOL (id obj) {
                                   return [[obj sidebarID] isEqualTo:itemID];
-                              }];
-        if(!collectionItem)
-            collectionItem = [[self media] firstObjectMatchingBlock:
-                              ^ BOOL (id obj) {
-                                  return [[obj sidebarID] isEqualTo:itemID];
-                              }];
-    }
+                              }];    }
 
     // Select the found collection item, or select the first item by default
     if(collectionItem != nil) [self selectItem:collectionItem];
@@ -248,8 +242,6 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
 
     NSArray *collections = [database collections];
     [self setCollections:collections];
-
-    [self setMedia:[[self database] media] ?: [NSArray array]];
 
     OESidebarOutlineView *sidebarView = (OESidebarOutlineView*)[self view];
     [sidebarView reloadData];
@@ -455,8 +447,7 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
     [outlineView setDropItem:nil dropChildIndex:NSOutlineViewDropOnItemIndex];
     return NSDragOperationCopy;
 }
-#pragma mark -
-#pragma mark NSOutlineView Delegate
+#pragma mark - NSOutlineView Delegate
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification
 {
     if(![self database]) return;
@@ -478,8 +469,7 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
 }
 
 - (void)outlineViewSelectionIsChanging:(NSNotification *)notification
-{
-}
+{}
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item
 {
@@ -519,8 +509,6 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
     NSString *autosaveName = [item isKindOfClass:[OESidebarGroupItem class]]?[item autosaveName]:nil;
     if([autosaveName isEqualToString:OESidebarGroupConsolesAutosaveName])
         return [[self systems] objectAtIndex:index];
-    else if([autosaveName isEqualToString:OESidebarGroupMediaAutosaveName])
-        return [[self media] objectAtIndex:index];
     else if([autosaveName isEqualToString:OESidebarGroupDevicesAutosaveName])
         return [[[OEStorageDeviceManager sharedStorageDeviceManager] devices] objectAtIndex:index];
     else if([autosaveName isEqualToString:OESidebarGroupCollectionsAutosaveName])
@@ -552,8 +540,6 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
     NSString *autosaveName = [item isKindOfClass:[OESidebarGroupItem class]]?[item autosaveName]:nil;
     if([autosaveName isEqualToString:OESidebarGroupConsolesAutosaveName])
         return [[self systems] count];
-    else if([autosaveName isEqualToString:OESidebarGroupMediaAutosaveName])
-        return [[self media] count];
     else if([autosaveName isEqualToString:OESidebarGroupDevicesAutosaveName])
         return [[[OEStorageDeviceManager sharedStorageDeviceManager] devices] count];
     else if([autosaveName isEqualToString:OESidebarGroupCollectionsAutosaveName])

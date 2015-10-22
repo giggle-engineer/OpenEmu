@@ -134,15 +134,8 @@ NSString *const OESidebarTogglesSystemNotification   = @"OESidebarTogglesSystemN
 
     if([item isGroupHeaderInSidebar])
     {
-        title = [self isItemExpanded:item] ? NSLocalizedString(@"Collapse", @"") : NSLocalizedString(@"Expand", @"");
-
-        menuItem = [[NSMenuItem alloc] initWithTitle:title action:@selector(OE_toggleGroupForMenuItem:) keyEquivalent:@""];
-        [menuItem setRepresentedObject:item];
-        [menu addItem:menuItem];
-
         if(index == 0)
         {
-            [menu addItem:[NSMenuItem separatorItem]];
             // TODO: clean up, menuForEvent should be delegated to the sidebarcontroller
             for(OEDBSystem *system in [OEDBSystem allSystemsInContext:[[OELibraryDatabase defaultDatabase] mainThreadContext]])
             {
@@ -150,7 +143,7 @@ NSString *const OESidebarTogglesSystemNotification   = @"OESidebarTogglesSystemN
                 [menuItem setRepresentedObject:system];
                 [menuItem setState:[[system enabled] boolValue] ? NSOnState : NSOffState];
                 [menu addItem:menuItem];
- }
+            }
         }
     }
     else if([item isKindOfClass:[OEDBSystem class]])
@@ -227,11 +220,14 @@ NSString *const OESidebarTogglesSystemNotification   = @"OESidebarTogglesSystemN
         }
     }
 
-    OEMenuStyle style = OEMenuStyleDark;
-    if([[NSUserDefaults standardUserDefaults] boolForKey:OEMenuOptionsStyleKey]) style = OEMenuStyleLight;
 
-    NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInteger:style] forKey:OEMenuOptionsStyleKey];
-    [OEMenu openMenu:menu withEvent:event forView:self options:options];
+    if([[menu itemArray] count]) {
+        OEMenuStyle style = OEMenuStyleDark;
+        if([[NSUserDefaults standardUserDefaults] boolForKey:OEMenuOptionsStyleKey]) style = OEMenuStyleLight;
+
+        NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInteger:style] forKey:OEMenuOptionsStyleKey];
+        [OEMenu openMenu:menu withEvent:event forView:self options:options];
+    }
 
     _highlightedRow = -1;
     [self setNeedsDisplay];

@@ -200,7 +200,7 @@ const CGFloat BadgeSpacing = 2.0;
 {	
 	textObj = [super setUpFieldEditorAttributes:textObj];
 	
-	NSFont *font = [[NSFontManager sharedFontManager] fontWithFamily:@"Lucida Grande" traits:NSBoldFontMask weight:9 size:11.0];
+    NSFont *font = [NSFont boldSystemFontOfSize:11];
 	NSColor *textColor = [NSColor blackColor];
 	
 	NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -261,10 +261,14 @@ const CGFloat BadgeSpacing = 2.0;
 		titleFrame.origin.y += 9;
 		titleFrame.origin.x -= 8;
 		titleFrame.size.width += 8;
-	}
+    }
     else
     {
         attributes = [[self itemAttributes] textAttributesForState:state];
+        
+        // Adjust the title frame to fit the system typeface.
+        titleFrame.size.height += 3;
+        titleFrame.origin.y -= 3;
     }
 
 	NSAttributedString *strVal = [[NSAttributedString alloc] initWithString:[self stringValue] attributes:attributes];
@@ -327,7 +331,7 @@ const CGFloat BadgeSpacing = 2.0;
 
 	if([self isEditing])
     {
-        NSFont *font = [[NSFontManager sharedFontManager] fontWithFamily:@"Lucida Grande" traits:NSBoldFontMask weight:9 size:11.0];
+        NSFont *font = [NSFont boldSystemFontOfSize:11];
         NSColor *textColor = [NSColor blackColor];
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         [paragraphStyle setLineBreakMode:NSLineBreakByTruncatingTail];

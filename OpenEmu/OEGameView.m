@@ -113,6 +113,8 @@ static const GLfloat cg_coords[] = {
     {
         // Make sure we have a screen size set so _prepareGameTexture does not fail
         _gameScreenSize = (OEIntSize){.width=1, .height=1};
+
+        self.wantsBestResolutionOpenGLSurface = YES;
     }
     return self;
 }
@@ -124,6 +126,8 @@ static const GLfloat cg_coords[] = {
     {
         // Make sure we have a screen size set so _prepareGameTexture does not fail
         _gameScreenSize = (OEIntSize){.width=1, .height=1};
+
+        self.wantsBestResolutionOpenGLSurface = YES;
     }
     return self;
 }
@@ -165,7 +169,6 @@ static const GLfloat cg_coords[] = {
 
 - (void)prepareOpenGL
 {
-    [self setWantsBestResolutionOpenGLSurface:YES];
     [super prepareOpenGL];
 
     CGLContextObj cgl_ctx = [[self openGLContext] CGLContextObj];
@@ -205,7 +208,6 @@ static const GLfloat cg_coords[] = {
     // rendering
     [self setupDisplayLink];
     [self rebindIOSurface];
-
 }
 
 - (void)_prepareGameTexture
@@ -420,7 +422,11 @@ static const GLfloat cg_coords[] = {
 
     glEnable(GL_TEXTURE_RECTANGLE_EXT);
     glBindTexture(GL_TEXTURE_RECTANGLE_EXT, _gameTexture);
-    CGLTexImageIOSurface2D(cgl_ctx, GL_TEXTURE_RECTANGLE_EXT, GL_RGB8, (int)IOSurfaceGetWidth(_gameSurfaceRef), (int)IOSurfaceGetHeight(_gameSurfaceRef), GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, _gameSurfaceRef, 0);
+
+    int width = (int)IOSurfaceGetWidth(_gameSurfaceRef);
+    int height = (int)IOSurfaceGetHeight(_gameSurfaceRef);
+
+    CGLTexImageIOSurface2D(cgl_ctx, GL_TEXTURE_RECTANGLE_EXT, GL_RGB8, width, height, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, _gameSurfaceRef, 0);
 }
 #pragma mark - 
 - (void)setBackgroundColor:(NSColor *)backgroundColor
@@ -562,12 +568,19 @@ static CVReturn OEGameViewDisplayLinkCallback(CVDisplayLinkRef displayLink,const
     CGLLockContext(cgl_ctx);
     
     [self update];
+    [self updateViewport];
+
+    CGLUnlockContext(cgl_ctx);
+}
+
+- (void)updateViewport
+{
+    CGLContextObj cgl_ctx = [[self openGLContext] CGLContextObj];
 
     const NSRect bounds = [self bounds];
     const NSRect boundsOnWindow = [self convertRectToBacking:bounds];
-    glViewport(0, 0, NSWidth(boundsOnWindow),NSHeight(boundsOnWindow));
 
-    CGLUnlockContext(cgl_ctx);
+    glViewport(0, 0, NSWidth(boundsOnWindow),NSHeight(boundsOnWindow));
 }
 
 - (void)drawRect:(NSRect)dirtyRect
@@ -606,6 +619,8 @@ static CVReturn OEGameViewDisplayLinkCallback(CVDisplayLinkRef displayLink,const
 
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
+
+        [self updateViewport];
 
         if(shader != nil)
             [self OE_drawSurface:_gameSurfaceRef inCGLContext:cgl_ctx usingShader:shader];
@@ -652,7 +667,7 @@ static CVReturn OEGameViewDisplayLinkCallback(CVDisplayLinkRef displayLink,const
     glDisableClientState(GL_VERTEX_ARRAY);
 
     glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
-    glViewport(0, 0, floorf(NSWidth([self bounds])*[[self window] backingScaleFactor]), floorf(NSHeight([self bounds])*[[self window] backingScaleFactor]));
+    [self updateViewport];
 }
 
 - (void)OE_applyCgShader:(OECGShader *)shader usingVertices:(const GLfloat *)vertices withTextureSize:(const OEIntSize)textureSize withOutputSize:(const OEIntSize)outputSize inPassNumber:(const NSUInteger)passNumber inCGLContext:(CGLContextObj)cgl_ctx
@@ -857,7 +872,7 @@ static CVReturn OEGameViewDisplayLinkCallback(CVDisplayLinkRef displayLink,const
 
     // render to screen
     glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
-    glViewport(0, 0, floorf(NSWidth([self bounds])*[[self window] backingScaleFactor]), floorf(NSHeight([self bounds])*[[self window] backingScaleFactor]));
+    [self updateViewport];
     glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
     glDisable(GL_TEXTURE_RECTANGLE_EXT);
     glEnable(GL_TEXTURE_2D);
@@ -1006,7 +1021,6 @@ static CVReturn OEGameViewDisplayLinkCallback(CVDisplayLinkRef displayLink,const
         _filterName = [value copy];
 
         [self OE_refreshFilterRenderer];
-        [[self delegate] gameView:self setDrawSquarePixels:NO];
     }
 }
 
@@ -1207,7 +1221,6 @@ static CVReturn OEGameViewDisplayLinkCallback(CVDisplayLinkRef displayLink,const
     if(_delegate != value)
     {
         _delegate = value;
-        [_delegate gameView:self setDrawSquarePixels:NO];
     }
 }
 
@@ -1223,15 +1236,21 @@ static CVReturn OEGameViewDisplayLinkCallback(CVDisplayLinkRef displayLink,const
 
 - (void)setScreenSize:(OEIntSize)newScreenSize withIOSurfaceID:(IOSurfaceID)newSurfaceID;
 {
-    DLog(@"Set screensize to: %@", NSStringFromOEIntSize(newScreenSize));
+    BOOL surfaceChanged = _gameSurfaceID != newSurfaceID;
+    BOOL screenRectChanged = _gameScreenSize.width != newScreenSize.width || _gameScreenSize.height != newScreenSize.height;
+
+    if (!surfaceChanged && !screenRectChanged) return;
+    DLog(@"Set screensize to: %@ surfaceId:%d", NSStringFromOEIntSize(newScreenSize), newSurfaceID);
+
     // Recache the new resized surfaceID, so we can get our surfaceRef from it, to draw.
     _gameSurfaceID = newSurfaceID;
     _gameScreenSize = newScreenSize;
 
-    [self rebindIOSurface];
-
     CGLContextObj cgl_ctx = [[self openGLContext] CGLContextObj];
     [[self openGLContext] makeCurrentContext];
+    
+    if (surfaceChanged) [self rebindIOSurface];
+
     CGLLockContext(cgl_ctx);
     {
         if(_rttGameTextures)

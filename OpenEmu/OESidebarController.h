@@ -28,7 +28,9 @@
 
 #import "OESidebarOutlineView.h"
 
+
 extern NSString *const OESuppressRemoveCollectionConfirmationKey;
+extern NSString *const OESidebarSelectionDidChangeNotificationName;
 
 extern NSString *const OESidebarMinWidth;
 extern NSString *const OESidebarMaxWidth;
@@ -64,6 +66,6 @@ extern NSString *const OEMainViewMinWidth;
 @property (strong) OESidebarOutlineView *view;
 @property (strong, nonatomic) OELibraryDatabase *database;
 @property (strong, readonly) NSArray *groups;
-@property (strong, readonly) NSArray *systems, *collections, *media;
+@property (strong, readonly) NSArray *systems, *collections;
 @property (nonatomic, strong, readwrite) id editingItem;
 @end

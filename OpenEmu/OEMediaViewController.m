@@ -81,9 +81,11 @@
 - (void)viewDidAppear
 {
     [super viewDidAppear];
-
-    DLog();
     [self _setupSearchMenuTemplate];
+}
+
+- (void)viewDidDisappear {
+    [super viewDidDisappear];
 }
 
 - (void)_setupSearchMenuTemplate
@@ -153,9 +155,12 @@
         [self setSaveStateMode:[representedObject isKindOfClass:[OEDBSavedGamesMedia class]]];
         [self reloadData];
     }
-    DLog();
     [self _setupSearchMenuTemplate];
+}
 
+- (OECollectionViewControllerViewTag)OE_currentViewTagByToolbarState
+{
+    return OEGridViewTag;
 }
 #pragma mark - OELibrarySubviewController Implementation
 - (id)encodeCurrentState
@@ -164,8 +169,7 @@
 }
 
 - (void)restoreState:(id)state
-{
-}
+{}
 
 - (NSArray*)selectedGames
 {
@@ -215,7 +219,7 @@
 }
 
 - (void)fetchItems
-{
+{   
 #pragma TODO(Improve group detection)
     if([self representedObject] == nil) return;
 

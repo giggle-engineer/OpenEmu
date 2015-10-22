@@ -60,12 +60,28 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
 @implementation OEGameCollectionViewController
 @synthesize gamesController=gamesController;
 
+- (NSString*)nibName
+{
+    return @"OECollectionViewController";
+}
+
 - (void)loadView
 {
     [super loadView];
 
-    // Set up games controller
-    NSManagedObjectContext *context = [[OELibraryDatabase defaultDatabase] mainThreadContext];
+    [[self listView] bind:@"selectionIndexes" toObject:gamesController withKeyPath:@"selectionIndexes" options:@{}];
+    [[self listView] setDraggingSourceOperationMask:NSDragOperationCopy forLocal:NO];
+}
+
+- (void)setLibraryController:(OELibraryController *)libraryController
+{
+    [super setLibraryController:libraryController];
+    [self _setupGamesController];
+}
+
+- (void)_setupGamesController {
+    OELibraryDatabase *database = [[self libraryController] database];
+    NSManagedObjectContext *context = [database mainThreadContext];
 
     OE_defaultSortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"cleanDisplayName" ascending:YES selector:@selector(caseInsensitiveCompare:)]];
 
@@ -79,10 +95,6 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
     [gamesController setSortDescriptors:OE_defaultSortDescriptors];
     [gamesController setFetchPredicate:[NSPredicate predicateWithValue:NO]];
     [gamesController setAvoidsEmptySelection:NO];
-
-    [[self listView] bind:@"selectionIndexes" toObject:gamesController withKeyPath:@"selectionIndexes" options:@{}];
-
-    [[self listView] setDraggingSourceOperationMask:NSDragOperationCopy forLocal:NO];
 }
 
 - (void)fetchItems
@@ -95,13 +107,12 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
     [gamesController setFetchPredicate:pred];
     [gamesController setLimit:[representedObject fetchLimit]];
     [gamesController setFetchSortDescriptors:[representedObject fetchSortDescriptors]];
-    __block BOOL ok;
 
-    ok = [gamesController fetchWithRequest:nil merge:NO error:nil];
-
-    if(!ok)
+    NSError *error = nil;
+    if(![gamesController fetchWithRequest:nil merge:NO error:&error])
     {
-        NSLog(@"Error while fetching");
+        NSLog(@"Error while fetching: %@", gamesController);
+        NSLog(@"%@", [error localizedDescription]);
         return;
     }
 }
@@ -184,7 +195,6 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
     [gamesController setFilterPredicate:pred];
 
     [[self listView] reloadData];
-    [[self coverFlowView] performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     [[self gridView] reloadData];
 }
 
@@ -811,18 +821,6 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
 
     [gamesController setSortDescriptors:[[self listView] sortDescriptors]];
     [[self listView] reloadData];
-
-    // If we send -reloadData to `coverFlowView`, it changes the selected index to an index that doesn't match
-    // either the previous selected index or the new selected index as defined by `gamesController`. We need to
-    // remember the actual new selected index, wait for `coverFlowView` to reload its data and then restore the
-    // correct selection.
-    if([[gamesController selectionIndexes] count] == 1)
-    {
-        NSInteger selectedRow = [[gamesController selectionIndexes] firstIndex];
-        [[self coverFlowView] reloadData];
-        [[self coverFlowView] setSelectedIndex:(int)selectedRow];
-    }
-    else [[self coverFlowView] reloadData];
 }
 
 #pragma mark - TableView Drag and Drop
@@ -902,7 +900,6 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
 
     _listViewSelectionChangeDate = [NSDate date];
 
-    if([[[self listView] selectedRowIndexes] count] == 1) [[self coverFlowView] setSelectedIndex:(int)[[[self listView] selectedRowIndexes] firstIndex]];
     [self setSelectionIndexes:[[self listView] selectedRowIndexes]];
 }
 

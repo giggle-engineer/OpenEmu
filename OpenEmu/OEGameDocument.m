@@ -628,7 +628,9 @@ typedef enum : NSUInteger
                 }
                 else
                 {
-                    [[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[rom URL] display:NO completionHandler:nil];
+                    [[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[rom URL] display:NO completionHandler:^(NSDocument * _Nullable document, BOOL documentWasAlreadyOpen, NSError * _Nullable error) {
+                        ;
+                    }];
                 }
             }
         };
@@ -1432,11 +1434,6 @@ typedef enum : NSUInteger
 - (void)gameViewController:(OEGameViewController *)sender didReceiveMouseEvent:(OEEvent *)event;
 {
     [[self gameSystemResponder] handleMouseEvent:event];
-}
-
-- (void)gameViewController:(OEGameViewController *)sender setDrawSquarePixels:(BOOL)drawSquarePixels
-{
-    [_gameCoreManager setDrawSquarePixels:drawSquarePixels];
 }
 
 @end
