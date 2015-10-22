@@ -82,7 +82,7 @@
 				94EBBCFB183F42CE00743756 /* CopyFiles */,
 			);
 			dependencies = (
-				08B048671BD232A300C81128 /* PBXTargetDependency */,
+				3DB744CD1BD8BB0300C23E74 /* PBXTargetDependency */,
 				87DF05401BCE3CDC0060E2C2 /* PBXTargetDependency */,
 				081A462E1B9574B800565444 /* PBXTargetDependency */,
 				8378DE941A785849003DA046 /* PBXTargetDependency */,
@@ -124,16 +124,6 @@
 		086769671B96E92C006545DA /* Keyboard-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 086769661B96E92C006545DA /* Keyboard-Mappings.plist */; };
 		086769691B96E936006545DA /* Controller-Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 086769681B96E936006545DA /* Controller-Preferences.plist */; };
 		0867696B1B96E93F006545DA /* Controller-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0867696A1B96E93F006545DA /* Controller-Mappings.plist */; };
-		08B0483F1BD231BF00C81128 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6711810136368330034379A /* Cocoa.framework */; };
-		08B048401BD231BF00C81128 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DF05431BCE3DA50060E2C2 /* OpenEmuSystem.framework */; };
-		08B0485D1BD2325B00C81128 /* Controller-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B048511BD2325B00C81128 /* Controller-Mappings.plist */; };
-		08B0485E1BD2325B00C81128 /* Controller-Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B048521BD2325B00C81128 /* Controller-Preferences.plist */; };
-		08B0485F1BD2325B00C81128 /* controller_studioii.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B048531BD2325B00C81128 /* controller_studioii.png */; };
-		08B048601BD2325B00C81128 /* controller_studioii_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B048541BD2325B00C81128 /* controller_studioii_mask.png */; };
-		08B048611BD2325B00C81128 /* Keyboard-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B048551BD2325B00C81128 /* Keyboard-Mappings.plist */; };
-		08B048631BD2325B00C81128 /* OEStudioIISystemResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B048591BD2325B00C81128 /* OEStudioIISystemResponder.m */; };
-		08B048651BD2325B00C81128 /* studio_ii_library.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B0485C1BD2325B00C81128 /* studio_ii_library.png */; };
-		08B048681BD232AA00C81128 /* Studio II.oesystemplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */; };
 		08D786141B9586F600CCC1A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6711810136368330034379A /* Cocoa.framework */; };
 		08D786151B95870000CCC1A3 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D120C417112E1300E868A8 /* OpenEmuSystem.framework */; };
 		0A9F272216635A1B008B1FB8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9F272116635A1B008B1FB8 /* libz.dylib */; };
@@ -205,6 +195,25 @@
 		3D41E8EC1BD4959300A76EFD /* OEOpenGL2GameRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E8EA1BD4959300A76EFD /* OEOpenGL2GameRenderer.m */; };
 		3DA6EDCC1BD790B900560326 /* OEOpenGL3GameRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6EDCB1BD790B900560326 /* OEOpenGL3GameRenderer.m */; };
 		3DA6EDCD1BD790B900560326 /* OEOpenGL3GameRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6EDCB1BD790B900560326 /* OEOpenGL3GameRenderer.m */; };
+		3DB744AA1BD8BA9E00C23E74 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6711810136368330034379A /* Cocoa.framework */; };
+		3DB744AB1BD8BA9E00C23E74 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D120C417112E1300E868A8 /* OpenEmuSystem.framework */; };
+		3DB744BC1BD8BAB200C23E74 /* OEPS2SystemController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DB744771BD8B95300C23E74 /* OEPS2SystemController.h */; };
+		3DB744BD1BD8BAB200C23E74 /* OEPS2SystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB744781BD8B95300C23E74 /* OEPS2SystemController.m */; };
+		3DB744BE1BD8BAB200C23E74 /* OEPS2SystemResponder.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DB744791BD8B95300C23E74 /* OEPS2SystemResponder.h */; };
+		3DB744BF1BD8BAB200C23E74 /* OEPS2SystemResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7447A1BD8B95300C23E74 /* OEPS2SystemResponder.m */; };
+		3DB744C01BD8BAB200C23E74 /* OEPS2SystemResponderClient.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7447B1BD8B95300C23E74 /* OEPS2SystemResponderClient.h */; };
+		3DB744C11BD8BACD00C23E74 /* controller_psx_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7447F1BD8B9DE00C23E74 /* controller_psx_mask.png */; };
+		3DB744C21BD8BACD00C23E74 /* controller_psx_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744801BD8B9DE00C23E74 /* controller_psx_mask@2x.png */; };
+		3DB744C31BD8BACD00C23E74 /* controller_psx.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744811BD8B9DE00C23E74 /* controller_psx.png */; };
+		3DB744C41BD8BACD00C23E74 /* controller_psx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744821BD8B9DE00C23E74 /* controller_psx@2x.png */; };
+		3DB744C51BD8BACD00C23E74 /* Controller-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744831BD8B9DE00C23E74 /* Controller-Mappings.plist */; };
+		3DB744C61BD8BACD00C23E74 /* Controller-Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744841BD8B9DE00C23E74 /* Controller-Preferences.plist */; };
+		3DB744C71BD8BACD00C23E74 /* Keyboard-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744851BD8B9DE00C23E74 /* Keyboard-Mappings.plist */; };
+		3DB744C81BD8BACD00C23E74 /* PlayStation2-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744861BD8B9DE00C23E74 /* PlayStation2-Info.plist */; };
+		3DB744C91BD8BACD00C23E74 /* psx_library.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744871BD8B9DE00C23E74 /* psx_library.png */; };
+		3DB744CA1BD8BACD00C23E74 /* psx_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744881BD8B9DE00C23E74 /* psx_library@2x.png */; };
+		3DB744CB1BD8BACD00C23E74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DB744931BD8B9EC00C23E74 /* InfoPlist.strings */; };
+		3DB744CE1BD8BB0B00C23E74 /* PlayStation 2.oesystemplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DB744BA1BD8BA9E00C23E74 /* PlayStation 2.oesystemplugin */; };
 		3DFAB00D144644D4005EF0C3 /* OEGameShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA788FE0FF9C95A007CE5DB /* OEGameShader.m */; };
 		4FC6C54519AD7C4D00231545 /* controller_colecovision@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC6C54019AD7BBB00231545 /* controller_colecovision@2x.png */; };
 		4FC6C54619AD7C5B00231545 /* controller_colecovision_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC6C53F19AD7BBB00231545 /* controller_colecovision_mask@2x.png */; };
@@ -1035,13 +1044,6 @@
 			remoteGlobalIDString = 081A46251B95744A00565444;
 			remoteInfo = Pokemonmini;
 		};
-		08B048661BD232A300C81128 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 08B0483A1BD231BF00C81128;
-			remoteInfo = "Studio II";
-		};
 		1B6A25011430F8FB009F1CE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
@@ -1069,6 +1071,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1BEF2A9311682A530090F72B;
 			remoteInfo = OpenEmuHelperApp;
+		};
+		3DB744CC1BD8BB0300C23E74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DB744A51BD8BA9E00C23E74;
+			remoteInfo = "PlayStation 2";
 		};
 		820EB7621483FBEF008EC398 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1459,7 +1468,7 @@
 			dstPath = OpenEmu.app/Contents/PlugIns/Systems;
 			dstSubfolderSpec = 16;
 			files = (
-				08B048681BD232AA00C81128 /* Studio II.oesystemplugin in CopyFiles */,
+				3DB744CE1BD8BB0B00C23E74 /* PlayStation 2.oesystemplugin in CopyFiles */,
 				87DF05411BCE3CEA0060E2C2 /* Dreamcast.oesystemplugin in CopyFiles */,
 				081A462F1B9574CE00565444 /* Pokemon mini.oesystemplugin in CopyFiles */,
 				8378DE951A785853003DA046 /* GameCube.oesystemplugin in CopyFiles */,
@@ -1554,17 +1563,6 @@
 		086769661B96E92C006545DA /* Keyboard-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Keyboard-Mappings.plist"; path = "Pokemon mini/Keyboard-Mappings.plist"; sourceTree = SOURCE_ROOT; };
 		086769681B96E936006545DA /* Controller-Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Controller-Preferences.plist"; path = "Pokemon mini/Controller-Preferences.plist"; sourceTree = SOURCE_ROOT; };
 		0867696A1B96E93F006545DA /* Controller-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Controller-Mappings.plist"; path = "Pokemon mini/Controller-Mappings.plist"; sourceTree = SOURCE_ROOT; };
-		08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Studio II.oesystemplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		08B048511BD2325B00C81128 /* Controller-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Controller-Mappings.plist"; sourceTree = "<group>"; };
-		08B048521BD2325B00C81128 /* Controller-Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Controller-Preferences.plist"; sourceTree = "<group>"; };
-		08B048531BD2325B00C81128 /* controller_studioii.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_studioii.png; sourceTree = "<group>"; };
-		08B048541BD2325B00C81128 /* controller_studioii_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_studioii_mask.png; sourceTree = "<group>"; };
-		08B048551BD2325B00C81128 /* Keyboard-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Keyboard-Mappings.plist"; sourceTree = "<group>"; };
-		08B048581BD2325B00C81128 /* OEStudioIISystemResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEStudioIISystemResponder.h; sourceTree = "<group>"; };
-		08B048591BD2325B00C81128 /* OEStudioIISystemResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEStudioIISystemResponder.m; sourceTree = "<group>"; };
-		08B0485A1BD2325B00C81128 /* OEStudioIISystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEStudioIISystemResponderClient.h; sourceTree = "<group>"; };
-		08B0485B1BD2325B00C81128 /* Studio II-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Studio II-Info.plist"; sourceTree = "<group>"; };
-		08B0485C1BD2325B00C81128 /* studio_ii_library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studio_ii_library.png; sourceTree = "<group>"; };
 		0A9F272116635A1B008B1FB8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		11BD776A196A46AD00BFB3FE /* controller_n64_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_n64_mask.png; sourceTree = "<group>"; };
 		11BD776B196A46AD00BFB3FE /* controller_n64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_n64.png; sourceTree = "<group>"; };
@@ -1672,6 +1670,28 @@
 		3D711839150064F50056E3BF /* PSYBlockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYBlockTimer.m; sourceTree = "<group>"; };
 		3DA6EDCA1BD790B900560326 /* OEOpenGL3GameRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEOpenGL3GameRenderer.h; sourceTree = "<group>"; };
 		3DA6EDCB1BD790B900560326 /* OEOpenGL3GameRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEOpenGL3GameRenderer.m; sourceTree = "<group>"; };
+		3DB744771BD8B95300C23E74 /* OEPS2SystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEPS2SystemController.h; path = "PlayStation 2/OEPS2SystemController.h"; sourceTree = "<group>"; };
+		3DB744781BD8B95300C23E74 /* OEPS2SystemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEPS2SystemController.m; path = "PlayStation 2/OEPS2SystemController.m"; sourceTree = "<group>"; };
+		3DB744791BD8B95300C23E74 /* OEPS2SystemResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEPS2SystemResponder.h; path = "PlayStation 2/OEPS2SystemResponder.h"; sourceTree = "<group>"; };
+		3DB7447A1BD8B95300C23E74 /* OEPS2SystemResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEPS2SystemResponder.m; path = "PlayStation 2/OEPS2SystemResponder.m"; sourceTree = "<group>"; };
+		3DB7447B1BD8B95300C23E74 /* OEPS2SystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEPS2SystemResponderClient.h; path = "PlayStation 2/OEPS2SystemResponderClient.h"; sourceTree = "<group>"; };
+		3DB7447F1BD8B9DE00C23E74 /* controller_psx_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = controller_psx_mask.png; path = "PlayStation 2/controller_psx_mask.png"; sourceTree = "<group>"; };
+		3DB744801BD8B9DE00C23E74 /* controller_psx_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "controller_psx_mask@2x.png"; path = "PlayStation 2/controller_psx_mask@2x.png"; sourceTree = "<group>"; };
+		3DB744811BD8B9DE00C23E74 /* controller_psx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = controller_psx.png; path = "PlayStation 2/controller_psx.png"; sourceTree = "<group>"; };
+		3DB744821BD8B9DE00C23E74 /* controller_psx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "controller_psx@2x.png"; path = "PlayStation 2/controller_psx@2x.png"; sourceTree = "<group>"; };
+		3DB744831BD8B9DE00C23E74 /* Controller-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Controller-Mappings.plist"; path = "PlayStation 2/Controller-Mappings.plist"; sourceTree = "<group>"; };
+		3DB744841BD8B9DE00C23E74 /* Controller-Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Controller-Preferences.plist"; path = "PlayStation 2/Controller-Preferences.plist"; sourceTree = "<group>"; };
+		3DB744851BD8B9DE00C23E74 /* Keyboard-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Keyboard-Mappings.plist"; path = "PlayStation 2/Keyboard-Mappings.plist"; sourceTree = "<group>"; };
+		3DB744861BD8B9DE00C23E74 /* PlayStation2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PlayStation2-Info.plist"; path = "PlayStation 2/PlayStation2-Info.plist"; sourceTree = "<group>"; };
+		3DB744871BD8B9DE00C23E74 /* psx_library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = psx_library.png; path = "PlayStation 2/psx_library.png"; sourceTree = "<group>"; };
+		3DB744881BD8B9DE00C23E74 /* psx_library@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "psx_library@2x.png"; path = "PlayStation 2/psx_library@2x.png"; sourceTree = "<group>"; };
+		3DB744941BD8B9EC00C23E74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "PlayStation 2/en.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3DB744A01BD8BA1100C23E74 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "PlayStation 2/de.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3DB744A11BD8BA1B00C23E74 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "PlayStation 2/es.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3DB744A21BD8BA2500C23E74 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "PlayStation 2/fr.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3DB744A31BD8BA2F00C23E74 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = "PlayStation 2/it.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3DB744A41BD8BA3900C23E74 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "PlayStation 2/pt.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3DB744BA1BD8BA9E00C23E74 /* PlayStation 2.oesystemplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlayStation 2.oesystemplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC6C53F19AD7BBB00231545 /* controller_colecovision_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controller_colecovision_mask@2x.png"; sourceTree = "<group>"; };
 		4FC6C54019AD7BBB00231545 /* controller_colecovision@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controller_colecovision@2x.png"; sourceTree = "<group>"; };
 		53439A8A13B92C4A005C0CC8 /* OELibraryDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OELibraryDatabase.h; sourceTree = "<group>"; };
@@ -2979,15 +2999,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		08B0483E1BD231BF00C81128 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08B0483F1BD231BF00C81128 /* Cocoa.framework in Frameworks */,
-				08B048401BD231BF00C81128 /* OpenEmuSystem.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1415540C1442B3B300A01683 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -3031,6 +3042,15 @@
 			files = (
 				834C07DC166CD36A0000C146 /* Cocoa.framework in Frameworks */,
 				3887A8971024D796000FC4CF /* QuickLook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB744A91BD8BA9E00C23E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB744AA1BD8BA9E00C23E74 /* Cocoa.framework in Frameworks */,
+				3DB744AB1BD8BA9E00C23E74 /* OpenEmuSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3429,31 +3449,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		08B048501BD2325B00C81128 /* Studio II */ = {
-			isa = PBXGroup;
-			children = (
-				08B048581BD2325B00C81128 /* OEStudioIISystemResponder.h */,
-				08B048591BD2325B00C81128 /* OEStudioIISystemResponder.m */,
-				08B0485A1BD2325B00C81128 /* OEStudioIISystemResponderClient.h */,
-				08DF0B2E1BD89E0500D96160 /* Supporting Files */,
-			);
-			path = "Studio II";
-			sourceTree = "<group>";
-		};
-		08DF0B2E1BD89E0500D96160 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				08B0485C1BD2325B00C81128 /* studio_ii_library.png */,
-				08B048541BD2325B00C81128 /* controller_studioii_mask.png */,
-				08B048531BD2325B00C81128 /* controller_studioii.png */,
-				08B0485B1BD2325B00C81128 /* Studio II-Info.plist */,
-				08B048551BD2325B00C81128 /* Keyboard-Mappings.plist */,
-				08B048511BD2325B00C81128 /* Controller-Mappings.plist */,
-				08B048521BD2325B00C81128 /* Controller-Preferences.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3586,7 +3581,7 @@
 				837964E11A6149C000A8DE5C /* Supervision.oesystemplugin */,
 				081A46261B95744A00565444 /* Pokemon mini.oesystemplugin */,
 				87DF04FE1BCE2D100060E2C2 /* Dreamcast.oesystemplugin */,
-				08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */,
+				3DB744BA1BD8BA9E00C23E74 /* PlayStation 2.oesystemplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3898,6 +3893,37 @@
 				3DA6EDCB1BD790B900560326 /* OEOpenGL3GameRenderer.m */,
 			);
 			name = Renderers;
+			sourceTree = "<group>";
+		};
+		3DB744761BD8B92A00C23E74 /* Playstation 2 */ = {
+			isa = PBXGroup;
+			children = (
+				3DB744771BD8B95300C23E74 /* OEPS2SystemController.h */,
+				3DB744781BD8B95300C23E74 /* OEPS2SystemController.m */,
+				3DB744791BD8B95300C23E74 /* OEPS2SystemResponder.h */,
+				3DB7447A1BD8B95300C23E74 /* OEPS2SystemResponder.m */,
+				3DB7447B1BD8B95300C23E74 /* OEPS2SystemResponderClient.h */,
+				3DB7447E1BD8B9C800C23E74 /* Supporting Files */,
+			);
+			name = "Playstation 2";
+			sourceTree = "<group>";
+		};
+		3DB7447E1BD8B9C800C23E74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DB7447F1BD8B9DE00C23E74 /* controller_psx_mask.png */,
+				3DB744801BD8B9DE00C23E74 /* controller_psx_mask@2x.png */,
+				3DB744811BD8B9DE00C23E74 /* controller_psx.png */,
+				3DB744821BD8B9DE00C23E74 /* controller_psx@2x.png */,
+				3DB744831BD8B9DE00C23E74 /* Controller-Mappings.plist */,
+				3DB744841BD8B9DE00C23E74 /* Controller-Preferences.plist */,
+				3DB744851BD8B9DE00C23E74 /* Keyboard-Mappings.plist */,
+				3DB744861BD8B9DE00C23E74 /* PlayStation2-Info.plist */,
+				3DB744871BD8B9DE00C23E74 /* psx_library.png */,
+				3DB744881BD8B9DE00C23E74 /* psx_library@2x.png */,
+				3DB744931BD8B9EC00C23E74 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		53439A8613B92BEB005C0CC8 /* HUD */ = {
@@ -5832,6 +5858,7 @@
 				9405538617A34C6B009B505D /* PC Engine CD */,
 				94A22465170753D500098DA0 /* PC-FX */,
 				94A224F81707596200098DA0 /* PlayStation */,
+				3DB744761BD8B92A00C23E74 /* Playstation 2 */,
 				081A461F1B9572C400565444 /* Pokemon mini */,
 				94454EB617860E1E006C057B /* PSP */,
 				94A224D51707556D00098DA0 /* Saturn */,
@@ -5839,7 +5866,6 @@
 				94A224951707542A00098DA0 /* Sega CD */,
 				C6711821136368A30034379A /* Sega Master System */,
 				94A22475170753E100098DA0 /* SG-1000 */,
-				08B048501BD2325B00C81128 /* Studio II */,
 				C6480FC313648F670094FA33 /* SuperNES */,
 				837964E21A6149C000A8DE5C /* Supervision */,
 				943F998D1707D51100270E89 /* Vectrex */,
@@ -6009,23 +6035,6 @@
 			productReference = 081A46261B95744A00565444 /* Pokemon mini.oesystemplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
-		08B0483A1BD231BF00C81128 /* Studio II */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 08B0484B1BD231BF00C81128 /* Build configuration list for PBXNativeTarget "Studio II" */;
-			buildPhases = (
-				08B0483B1BD231BF00C81128 /* Sources */,
-				08B0483E1BD231BF00C81128 /* Frameworks */,
-				08B048411BD231BF00C81128 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Studio II";
-			productName = Dreamcast;
-			productReference = 08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */;
-			productType = "com.apple.product-type.bundle";
-		};
 		1415540E1442B3B300A01683 /* N64 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1415541A1442B3B300A01683 /* Build configuration list for PBXNativeTarget "N64" */;
@@ -6092,6 +6101,23 @@
 			name = OESaveStateQLPlugin;
 			productName = OESaveStateQLPlugin;
 			productReference = 3887A7F61024D1F9000FC4CF /* OESaveStateQLPlugin.qlgenerator */;
+			productType = "com.apple.product-type.bundle";
+		};
+		3DB744A51BD8BA9E00C23E74 /* PlayStation 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB744B71BD8BA9E00C23E74 /* Build configuration list for PBXNativeTarget "PlayStation 2" */;
+			buildPhases = (
+				3DB744A61BD8BA9E00C23E74 /* Sources */,
+				3DB744A91BD8BA9E00C23E74 /* Frameworks */,
+				3DB744AC1BD8BA9E00C23E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PlayStation 2";
+			productName = PlayStation;
+			productReference = 3DB744BA1BD8BA9E00C23E74 /* PlayStation 2.oesystemplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		820EB7391483F9A2008EC398 /* NeoGeoPocket */ = {
@@ -6830,7 +6856,7 @@
 				837964E01A6149C000A8DE5C /* Supervision */,
 				081A46251B95744A00565444 /* Pokemon mini */,
 				87DF04FD1BCE2D100060E2C2 /* Dreamcast */,
-				08B0483A1BD231BF00C81128 /* Studio II */,
+				3DB744A51BD8BA9E00C23E74 /* PlayStation 2 */,
 				82C9C96F0F080C7F0071460B /* Distribution */,
 				37C802FF101564A300356EF3 /* Build & Copy OpenEmuBase */,
 				83F37141140BB166005A7353 /* Build SystemPlugins */,
@@ -6853,19 +6879,6 @@
 				0867695F1B96E8DB006545DA /* pokemonmini_library@2x.png in Resources */,
 				086769611B96E8E6006545DA /* controller_pokemonmini_mask.png in Resources */,
 				086769631B96E902006545DA /* controller_pokemonmini.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		08B048411BD231BF00C81128 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08B0485E1BD2325B00C81128 /* Controller-Preferences.plist in Resources */,
-				08B0485D1BD2325B00C81128 /* Controller-Mappings.plist in Resources */,
-				08B048611BD2325B00C81128 /* Keyboard-Mappings.plist in Resources */,
-				08B048601BD2325B00C81128 /* controller_studioii_mask.png in Resources */,
-				08B0485F1BD2325B00C81128 /* controller_studioii.png in Resources */,
-				08B048651BD2325B00C81128 /* studio_ii_library.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6905,6 +6918,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB744AC1BD8BA9E00C23E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB744C11BD8BACD00C23E74 /* controller_psx_mask.png in Resources */,
+				3DB744C21BD8BACD00C23E74 /* controller_psx_mask@2x.png in Resources */,
+				3DB744C31BD8BACD00C23E74 /* controller_psx.png in Resources */,
+				3DB744C41BD8BACD00C23E74 /* controller_psx@2x.png in Resources */,
+				3DB744C51BD8BACD00C23E74 /* Controller-Mappings.plist in Resources */,
+				3DB744C61BD8BACD00C23E74 /* Controller-Preferences.plist in Resources */,
+				3DB744C71BD8BACD00C23E74 /* Keyboard-Mappings.plist in Resources */,
+				3DB744C81BD8BACD00C23E74 /* PlayStation2-Info.plist in Resources */,
+				3DB744C91BD8BACD00C23E74 /* psx_library.png in Resources */,
+				3DB744CA1BD8BACD00C23E74 /* psx_library@2x.png in Resources */,
+				3DB744CB1BD8BACD00C23E74 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7615,14 +7646,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		08B0483B1BD231BF00C81128 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08B048631BD2325B00C81128 /* OEStudioIISystemResponder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1415540B1442B3B300A01683 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -7668,6 +7691,18 @@
 				3887A8051024D2BC000FC4CF /* GenerateThumbnailForURL.m in Sources */,
 				3887A8061024D2BC000FC4CF /* GeneratePreviewForURL.m in Sources */,
 				3887A8071024D2BC000FC4CF /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB744A61BD8BA9E00C23E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB744BC1BD8BAB200C23E74 /* OEPS2SystemController.h in Sources */,
+				3DB744BD1BD8BAB200C23E74 /* OEPS2SystemController.m in Sources */,
+				3DB744BE1BD8BAB200C23E74 /* OEPS2SystemResponder.h in Sources */,
+				3DB744BF1BD8BAB200C23E74 /* OEPS2SystemResponder.m in Sources */,
+				3DB744C01BD8BAB200C23E74 /* OEPS2SystemResponderClient.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8209,11 +8244,6 @@
 			target = 081A46251B95744A00565444 /* Pokemon mini */;
 			targetProxy = 081A462D1B9574B800565444 /* PBXContainerItemProxy */;
 		};
-		08B048671BD232A300C81128 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 08B0483A1BD231BF00C81128 /* Studio II */;
-			targetProxy = 08B048661BD232A300C81128 /* PBXContainerItemProxy */;
-		};
 		1B6A25021430F8FB009F1CE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 83F37141140BB166005A7353 /* Build SystemPlugins */;
@@ -8233,6 +8263,11 @@
 			isa = PBXTargetDependency;
 			target = 1BEF2A9311682A530090F72B /* OpenEmuHelperApp */;
 			targetProxy = 3DAA589914464890001C09A8 /* PBXContainerItemProxy */;
+		};
+		3DB744CD1BD8BB0300C23E74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DB744A51BD8BA9E00C23E74 /* PlayStation 2 */;
+			targetProxy = 3DB744CC1BD8BB0300C23E74 /* PBXContainerItemProxy */;
 		};
 		820EB7631483FBEF008EC398 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -8432,6 +8467,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3DB744931BD8B9EC00C23E74 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DB744941BD8B9EC00C23E74 /* en */,
+				3DB744A01BD8BA1100C23E74 /* de */,
+				3DB744A11BD8BA1B00C23E74 /* es */,
+				3DB744A21BD8BA2500C23E74 /* fr */,
+				3DB744A31BD8BA2F00C23E74 /* it */,
+				3DB744A41BD8BA3900C23E74 /* pt */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		820EB7501483F9D3008EC398 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -9118,7 +9166,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Pokemon mini/Pokemon mini-Info.plist";
@@ -9152,64 +9199,6 @@
 			};
 			name = Release;
 		};
-		08B0484C1BD231BF00C81128 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)-SDK/build/Debug",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Studio II/Studio II-Info.plist";
-				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = oesystemplugin;
-			};
-			name = Debug;
-		};
-		08B0484D1BD231BF00C81128 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)-SDK/build/Debug",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Studio II/Studio II-Info.plist";
-				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = oesystemplugin;
-			};
-			name = Release;
-		};
 		141554181442B3B300A01683 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -9224,7 +9213,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "N64/N64-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9337,7 +9325,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Intellivision/Intellivision-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9411,6 +9398,50 @@
 			};
 			name = Release;
 		};
+		3DB744B81BD8BA9E00C23E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "PlayStation 2/PlayStation2-Info.plist";
+				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = oesystemplugin;
+			};
+			name = Debug;
+		};
+		3DB744B91BD8BA9E00C23E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "PlayStation 2/PlayStation2-Info.plist";
+				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = oesystemplugin;
+			};
+			name = Release;
+		};
 		820EB7481483F9A2008EC398 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -9422,7 +9453,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "NeoGeoPocket/NeoGeoPocket-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9467,7 +9497,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "GameGear/GameGear-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9535,7 +9564,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Supervision/Supervision-Info.plist";
@@ -9661,7 +9689,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "PC Engine CD/PC Engine CD-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9707,7 +9734,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Atari 7800/Atari 7800-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9753,7 +9779,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Jaguar/Jaguar-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9798,7 +9823,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "VMU/VMU-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9843,7 +9867,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Vectrex/Vectrex-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9889,7 +9912,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "3DO/3DO-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -9936,7 +9958,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Odyssey2/Odyssey2-Info.plist";
@@ -9985,7 +10006,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "PSP/PSP-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10028,7 +10048,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "Arcade/Arcade-Info.plist";
@@ -10073,7 +10092,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Sega 32X/Sega 32X-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10135,7 +10153,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "PC Engine/PC Engine-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10181,7 +10198,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "WonderSwan/WonderSwan-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10227,7 +10243,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Lynx/Lynx-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10273,7 +10288,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "PC-FX/PC-FX-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10319,7 +10333,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "SG-1000/SG-1000-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10365,7 +10378,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Virtual Boy/Virtual Boy-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10411,7 +10423,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Sega CD/Sega CD-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10457,7 +10468,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Atari 2600/Atari 2600-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10503,7 +10513,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Atari 5200/Atari 5200-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10549,7 +10558,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Nintendo FDS/Nintendo FDS-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10595,7 +10603,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Saturn/Saturn-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10640,7 +10647,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Computer/Computer-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10685,7 +10691,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "PlayStation/PlayStation-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10731,7 +10736,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "ColecoVision/ColecoVision-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -10792,7 +10796,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "GameCube/GameCube-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
 				ONLY_ACTIVE_ARCH = YES;
@@ -10833,7 +10836,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "NDS/NDS-Info.plist";
@@ -10970,6 +10972,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -10982,7 +10985,7 @@
 					DEBUG_PRINT,
 					NS_BUILD_32_LIKE_64,
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -11021,7 +11024,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = NS_BUILD_32_LIKE_64;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -11047,7 +11050,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "GameBoy Advance/GameBoy Advance-Info.plist";
@@ -11093,7 +11095,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "SuperNES/SuperNES-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -11138,7 +11139,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "NES/NES-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -11183,7 +11183,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "SegaMasterSystem/SegaMasterSystem-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -11228,7 +11227,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "GameBoy/GameBoy-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -11273,7 +11271,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Genesis/Genesis-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
@@ -11327,7 +11324,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -11387,15 +11383,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08B0484B1BD231BF00C81128 /* Build configuration list for PBXNativeTarget "Studio II" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				08B0484C1BD231BF00C81128 /* Debug */,
-				08B0484D1BD231BF00C81128 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1415541A1442B3B300A01683 /* Build configuration list for PBXNativeTarget "N64" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -11437,6 +11424,15 @@
 			buildConfigurations = (
 				3887A7F81024D1FA000FC4CF /* Debug */,
 				3887A7F91024D1FA000FC4CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB744B71BD8BA9E00C23E74 /* Build configuration list for PBXNativeTarget "PlayStation 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB744B81BD8BA9E00C23E74 /* Debug */,
+				3DB744B91BD8BA9E00C23E74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
