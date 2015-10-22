@@ -82,6 +82,7 @@
 				94EBBCFB183F42CE00743756 /* CopyFiles */,
 			);
 			dependencies = (
+				08B048671BD232A300C81128 /* PBXTargetDependency */,
 				87DF05401BCE3CDC0060E2C2 /* PBXTargetDependency */,
 				081A462E1B9574B800565444 /* PBXTargetDependency */,
 				8378DE941A785849003DA046 /* PBXTargetDependency */,
@@ -123,6 +124,16 @@
 		086769671B96E92C006545DA /* Keyboard-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 086769661B96E92C006545DA /* Keyboard-Mappings.plist */; };
 		086769691B96E936006545DA /* Controller-Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 086769681B96E936006545DA /* Controller-Preferences.plist */; };
 		0867696B1B96E93F006545DA /* Controller-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0867696A1B96E93F006545DA /* Controller-Mappings.plist */; };
+		08B0483F1BD231BF00C81128 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6711810136368330034379A /* Cocoa.framework */; };
+		08B048401BD231BF00C81128 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DF05431BCE3DA50060E2C2 /* OpenEmuSystem.framework */; };
+		08B0485D1BD2325B00C81128 /* Controller-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B048511BD2325B00C81128 /* Controller-Mappings.plist */; };
+		08B0485E1BD2325B00C81128 /* Controller-Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B048521BD2325B00C81128 /* Controller-Preferences.plist */; };
+		08B0485F1BD2325B00C81128 /* controller_studioii.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B048531BD2325B00C81128 /* controller_studioii.png */; };
+		08B048601BD2325B00C81128 /* controller_studioii_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B048541BD2325B00C81128 /* controller_studioii_mask.png */; };
+		08B048611BD2325B00C81128 /* Keyboard-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B048551BD2325B00C81128 /* Keyboard-Mappings.plist */; };
+		08B048631BD2325B00C81128 /* OEStudioIISystemResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B048591BD2325B00C81128 /* OEStudioIISystemResponder.m */; };
+		08B048651BD2325B00C81128 /* studio_ii_library.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B0485C1BD2325B00C81128 /* studio_ii_library.png */; };
+		08B048681BD232AA00C81128 /* Studio II.oesystemplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */; };
 		08D786141B9586F600CCC1A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6711810136368330034379A /* Cocoa.framework */; };
 		08D786151B95870000CCC1A3 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D120C417112E1300E868A8 /* OpenEmuSystem.framework */; };
 		0A9F272216635A1B008B1FB8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9F272116635A1B008B1FB8 /* libz.dylib */; };
@@ -595,36 +606,36 @@
 		871CE9131B0BCFB800B89E96 /* controller_pcfx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871CE9111B0BCFB800B89E96 /* controller_pcfx@2x.png */; };
 		87BC4DA21BA3A88600BF1F86 /* controller_7800_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BC4DA01BA3A88600BF1F86 /* controller_7800_mask@2x.png */; };
 		87BC4DA31BA3A88600BF1F86 /* controller_7800@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BC4DA11BA3A88600BF1F86 /* controller_7800@2x.png */; };
-		87DF051A1BCE302F0060E2C2 /* controller_dc_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05061BCE302E0060E2C2 /* controller_dc_mask.png */; settings = {ASSET_TAGS = (); }; };
-		87DF051B1BCE302F0060E2C2 /* controller_dc_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05071BCE302E0060E2C2 /* controller_dc_mask@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87DF051C1BCE302F0060E2C2 /* controller_dc.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05081BCE302E0060E2C2 /* controller_dc.png */; settings = {ASSET_TAGS = (); }; };
-		87DF051D1BCE302F0060E2C2 /* controller_dc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05091BCE302E0060E2C2 /* controller_dc@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87DF051E1BCE302F0060E2C2 /* Controller-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DF050A1BCE302E0060E2C2 /* Controller-Mappings.plist */; settings = {ASSET_TAGS = (); }; };
-		87DF051F1BCE302F0060E2C2 /* Controller-Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DF050B1BCE302E0060E2C2 /* Controller-Preferences.plist */; settings = {ASSET_TAGS = (); }; };
-		87DF05201BCE302F0060E2C2 /* dc_library.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF050C1BCE302E0060E2C2 /* dc_library.png */; settings = {ASSET_TAGS = (); }; };
-		87DF05271BCE302F0060E2C2 /* Keyboard-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05131BCE302F0060E2C2 /* Keyboard-Mappings.plist */; settings = {ASSET_TAGS = (); }; };
-		87DF05281BCE302F0060E2C2 /* OEDCSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DF05151BCE302F0060E2C2 /* OEDCSystemController.m */; settings = {ASSET_TAGS = (); }; };
-		87DF05291BCE302F0060E2C2 /* OEDCSystemResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DF05171BCE302F0060E2C2 /* OEDCSystemResponder.m */; settings = {ASSET_TAGS = (); }; };
-		87DF053E1BCE31460060E2C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87DF053D1BCE31460060E2C2 /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
+		87DF051A1BCE302F0060E2C2 /* controller_dc_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05061BCE302E0060E2C2 /* controller_dc_mask.png */; };
+		87DF051B1BCE302F0060E2C2 /* controller_dc_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05071BCE302E0060E2C2 /* controller_dc_mask@2x.png */; };
+		87DF051C1BCE302F0060E2C2 /* controller_dc.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05081BCE302E0060E2C2 /* controller_dc.png */; };
+		87DF051D1BCE302F0060E2C2 /* controller_dc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05091BCE302E0060E2C2 /* controller_dc@2x.png */; };
+		87DF051E1BCE302F0060E2C2 /* Controller-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DF050A1BCE302E0060E2C2 /* Controller-Mappings.plist */; };
+		87DF051F1BCE302F0060E2C2 /* Controller-Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DF050B1BCE302E0060E2C2 /* Controller-Preferences.plist */; };
+		87DF05201BCE302F0060E2C2 /* dc_library.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DF050C1BCE302E0060E2C2 /* dc_library.png */; };
+		87DF05271BCE302F0060E2C2 /* Keyboard-Mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DF05131BCE302F0060E2C2 /* Keyboard-Mappings.plist */; };
+		87DF05281BCE302F0060E2C2 /* OEDCSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DF05151BCE302F0060E2C2 /* OEDCSystemController.m */; };
+		87DF05291BCE302F0060E2C2 /* OEDCSystemResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DF05171BCE302F0060E2C2 /* OEDCSystemResponder.m */; };
+		87DF053E1BCE31460060E2C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87DF053D1BCE31460060E2C2 /* InfoPlist.strings */; };
 		87DF05411BCE3CEA0060E2C2 /* Dreamcast.oesystemplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87DF04FE1BCE2D100060E2C2 /* Dreamcast.oesystemplugin */; };
 		87DF05421BCE3D970060E2C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6711810136368330034379A /* Cocoa.framework */; };
 		87DF05441BCE3DA50060E2C2 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DF05431BCE3DA50060E2C2 /* OpenEmuSystem.framework */; };
-		87FB25321BBC56AB00E739CE /* controller_vectrex_eu.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252B1BBC56AB00E739CE /* controller_vectrex_eu.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25331BBC56AB00E739CE /* controller_vectrex_eu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252C1BBC56AB00E739CE /* controller_vectrex_eu@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25341BBC56AB00E739CE /* controller_vectrex_jap.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252D1BBC56AB00E739CE /* controller_vectrex_jap.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25351BBC56AB00E739CE /* controller_vectrex_jap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252E1BBC56AB00E739CE /* controller_vectrex_jap@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25361BBC56AB00E739CE /* controller_vectrex_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252F1BBC56AB00E739CE /* controller_vectrex_mask@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25371BBC56AC00E739CE /* controller_vectrex_usa.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25301BBC56AB00E739CE /* controller_vectrex_usa.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25381BBC56AC00E739CE /* controller_vectrex_usa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25311BBC56AB00E739CE /* controller_vectrex_usa@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB253B1BBC572E00E739CE /* Controller-Preferences-JAP.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25391BBC572E00E739CE /* Controller-Preferences-JAP.plist */; settings = {ASSET_TAGS = (); }; };
-		87FB253C1BBC572E00E739CE /* Controller-Preferences-NA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87FB253A1BBC572E00E739CE /* Controller-Preferences-NA.plist */; settings = {ASSET_TAGS = (); }; };
-		87FB253F1BBC883200E739CE /* controller_genesis_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB253D1BBC883200E739CE /* controller_genesis_mask@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25401BBC883200E739CE /* controller_genesis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB253E1BBC883200E739CE /* controller_genesis@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25431BBC894F00E739CE /* pcenginecd_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25411BBC894F00E739CE /* pcenginecd_library@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25441BBC894F00E739CE /* tgcd_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25421BBC894F00E739CE /* tgcd_library@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25481BBC89F300E739CE /* controller_fc_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25451BBC89F300E739CE /* controller_fc_mask@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB25491BBC89F300E739CE /* controller_fc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25461BBC89F300E739CE /* controller_fc@2x.png */; settings = {ASSET_TAGS = (); }; };
-		87FB254A1BBC89F300E739CE /* famicom_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25471BBC89F300E739CE /* famicom_library@2x.png */; settings = {ASSET_TAGS = (); }; };
+		87FB25321BBC56AB00E739CE /* controller_vectrex_eu.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252B1BBC56AB00E739CE /* controller_vectrex_eu.png */; };
+		87FB25331BBC56AB00E739CE /* controller_vectrex_eu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252C1BBC56AB00E739CE /* controller_vectrex_eu@2x.png */; };
+		87FB25341BBC56AB00E739CE /* controller_vectrex_jap.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252D1BBC56AB00E739CE /* controller_vectrex_jap.png */; };
+		87FB25351BBC56AB00E739CE /* controller_vectrex_jap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252E1BBC56AB00E739CE /* controller_vectrex_jap@2x.png */; };
+		87FB25361BBC56AB00E739CE /* controller_vectrex_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB252F1BBC56AB00E739CE /* controller_vectrex_mask@2x.png */; };
+		87FB25371BBC56AC00E739CE /* controller_vectrex_usa.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25301BBC56AB00E739CE /* controller_vectrex_usa.png */; };
+		87FB25381BBC56AC00E739CE /* controller_vectrex_usa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25311BBC56AB00E739CE /* controller_vectrex_usa@2x.png */; };
+		87FB253B1BBC572E00E739CE /* Controller-Preferences-JAP.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25391BBC572E00E739CE /* Controller-Preferences-JAP.plist */; };
+		87FB253C1BBC572E00E739CE /* Controller-Preferences-NA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87FB253A1BBC572E00E739CE /* Controller-Preferences-NA.plist */; };
+		87FB253F1BBC883200E739CE /* controller_genesis_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB253D1BBC883200E739CE /* controller_genesis_mask@2x.png */; };
+		87FB25401BBC883200E739CE /* controller_genesis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB253E1BBC883200E739CE /* controller_genesis@2x.png */; };
+		87FB25431BBC894F00E739CE /* pcenginecd_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25411BBC894F00E739CE /* pcenginecd_library@2x.png */; };
+		87FB25441BBC894F00E739CE /* tgcd_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25421BBC894F00E739CE /* tgcd_library@2x.png */; };
+		87FB25481BBC89F300E739CE /* controller_fc_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25451BBC89F300E739CE /* controller_fc_mask@2x.png */; };
+		87FB25491BBC89F300E739CE /* controller_fc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25461BBC89F300E739CE /* controller_fc@2x.png */; };
+		87FB254A1BBC89F300E739CE /* famicom_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB25471BBC89F300E739CE /* famicom_library@2x.png */; };
 		8C09E4D81867984B0095DB4E /* Beam4.cgp in Copy Filters Folder To App Resources */ = {isa = PBXBuildFile; fileRef = 8C09E4BE1867975E0095DB4E /* Beam4.cgp */; };
 		8C09E4D91867984B0095DB4E /* NTSC (Blargg).cgp in Copy Filters Folder To App Resources */ = {isa = PBXBuildFile; fileRef = 8C09E4BF1867975E0095DB4E /* NTSC (Blargg).cgp */; };
 		8C09E4DA1867984B0095DB4E /* _beam4_1.cg in Copy Filters Folder To App Resources */ = {isa = PBXBuildFile; fileRef = 8C09E4C01867975E0095DB4E /* _beam4_1.cg */; };
@@ -1250,6 +1261,13 @@
 			remoteGlobalIDString = 081A46251B95744A00565444;
 			remoteInfo = Pokemonmini;
 		};
+		08B048661BD232A300C81128 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08B0483A1BD231BF00C81128;
+			remoteInfo = "Studio II";
+		};
 		1B6A25011430F8FB009F1CE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
@@ -1660,6 +1678,7 @@
 			dstPath = OpenEmu.app/Contents/PlugIns/Systems;
 			dstSubfolderSpec = 16;
 			files = (
+				08B048681BD232AA00C81128 /* Studio II.oesystemplugin in CopyFiles */,
 				87DF05411BCE3CEA0060E2C2 /* Dreamcast.oesystemplugin in CopyFiles */,
 				081A462F1B9574CE00565444 /* Pokemon mini.oesystemplugin in CopyFiles */,
 				8378DE951A785853003DA046 /* GameCube.oesystemplugin in CopyFiles */,
@@ -1754,6 +1773,17 @@
 		086769661B96E92C006545DA /* Keyboard-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Keyboard-Mappings.plist"; path = "Pokemon mini/Keyboard-Mappings.plist"; sourceTree = SOURCE_ROOT; };
 		086769681B96E936006545DA /* Controller-Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Controller-Preferences.plist"; path = "Pokemon mini/Controller-Preferences.plist"; sourceTree = SOURCE_ROOT; };
 		0867696A1B96E93F006545DA /* Controller-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Controller-Mappings.plist"; path = "Pokemon mini/Controller-Mappings.plist"; sourceTree = SOURCE_ROOT; };
+		08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Studio II.oesystemplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08B048511BD2325B00C81128 /* Controller-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Controller-Mappings.plist"; sourceTree = "<group>"; };
+		08B048521BD2325B00C81128 /* Controller-Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Controller-Preferences.plist"; sourceTree = "<group>"; };
+		08B048531BD2325B00C81128 /* controller_studioii.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_studioii.png; sourceTree = "<group>"; };
+		08B048541BD2325B00C81128 /* controller_studioii_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_studioii_mask.png; sourceTree = "<group>"; };
+		08B048551BD2325B00C81128 /* Keyboard-Mappings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Keyboard-Mappings.plist"; sourceTree = "<group>"; };
+		08B048581BD2325B00C81128 /* OEStudioIISystemResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEStudioIISystemResponder.h; sourceTree = "<group>"; };
+		08B048591BD2325B00C81128 /* OEStudioIISystemResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEStudioIISystemResponder.m; sourceTree = "<group>"; };
+		08B0485A1BD2325B00C81128 /* OEStudioIISystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEStudioIISystemResponderClient.h; sourceTree = "<group>"; };
+		08B0485B1BD2325B00C81128 /* Studio II-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Studio II-Info.plist"; sourceTree = "<group>"; };
+		08B0485C1BD2325B00C81128 /* studio_ii_library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studio_ii_library.png; sourceTree = "<group>"; };
 		0A9F272116635A1B008B1FB8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		11BD776A196A46AD00BFB3FE /* controller_n64_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_n64_mask.png; sourceTree = "<group>"; };
 		11BD776B196A46AD00BFB3FE /* controller_n64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controller_n64.png; sourceTree = "<group>"; };
@@ -3395,6 +3425,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08B0483E1BD231BF00C81128 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B0483F1BD231BF00C81128 /* Cocoa.framework in Frameworks */,
+				08B048401BD231BF00C81128 /* OpenEmuSystem.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1415540C1442B3B300A01683 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -3836,6 +3875,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		08B048501BD2325B00C81128 /* Studio II */ = {
+			isa = PBXGroup;
+			children = (
+				08B048581BD2325B00C81128 /* OEStudioIISystemResponder.h */,
+				08B048591BD2325B00C81128 /* OEStudioIISystemResponder.m */,
+				08B0485A1BD2325B00C81128 /* OEStudioIISystemResponderClient.h */,
+				08DF0B2E1BD89E0500D96160 /* Supporting Files */,
+			);
+			path = "Studio II";
+			sourceTree = "<group>";
+		};
+		08DF0B2E1BD89E0500D96160 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08B0485C1BD2325B00C81128 /* studio_ii_library.png */,
+				08B048541BD2325B00C81128 /* controller_studioii_mask.png */,
+				08B048531BD2325B00C81128 /* controller_studioii.png */,
+				08B0485B1BD2325B00C81128 /* Studio II-Info.plist */,
+				08B048551BD2325B00C81128 /* Keyboard-Mappings.plist */,
+				08B048511BD2325B00C81128 /* Controller-Mappings.plist */,
+				08B048521BD2325B00C81128 /* Controller-Preferences.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3968,6 +4032,7 @@
 				837964E11A6149C000A8DE5C /* Supervision.oesystemplugin */,
 				081A46261B95744A00565444 /* Pokemon mini.oesystemplugin */,
 				87DF04FE1BCE2D100060E2C2 /* Dreamcast.oesystemplugin */,
+				08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -6511,6 +6576,7 @@
 				94A224951707542A00098DA0 /* Sega CD */,
 				C6711821136368A30034379A /* Sega Master System */,
 				94A22475170753E100098DA0 /* SG-1000 */,
+				08B048501BD2325B00C81128 /* Studio II */,
 				C6480FC313648F670094FA33 /* SuperNES */,
 				837964E21A6149C000A8DE5C /* Supervision */,
 				943F998D1707D51100270E89 /* Vectrex */,
@@ -6678,6 +6744,23 @@
 			name = "Pokemon mini";
 			productName = Pokemonmini;
 			productReference = 081A46261B95744A00565444 /* Pokemon mini.oesystemplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		08B0483A1BD231BF00C81128 /* Studio II */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08B0484B1BD231BF00C81128 /* Build configuration list for PBXNativeTarget "Studio II" */;
+			buildPhases = (
+				08B0483B1BD231BF00C81128 /* Sources */,
+				08B0483E1BD231BF00C81128 /* Frameworks */,
+				08B048411BD231BF00C81128 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Studio II";
+			productName = Dreamcast;
+			productReference = 08B0484E1BD231BF00C81128 /* Studio II.oesystemplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		1415540E1442B3B300A01683 /* N64 */ = {
@@ -7483,6 +7566,7 @@
 				837964E01A6149C000A8DE5C /* Supervision */,
 				081A46251B95744A00565444 /* Pokemon mini */,
 				87DF04FD1BCE2D100060E2C2 /* Dreamcast */,
+				08B0483A1BD231BF00C81128 /* Studio II */,
 				82C9C96F0F080C7F0071460B /* Distribution */,
 				37C802FF101564A300356EF3 /* Build & Copy OpenEmuBase */,
 				83F37141140BB166005A7353 /* Build SystemPlugins */,
@@ -7505,6 +7589,19 @@
 				0867695F1B96E8DB006545DA /* pokemonmini_library@2x.png in Resources */,
 				086769611B96E8E6006545DA /* controller_pokemonmini_mask.png in Resources */,
 				086769631B96E902006545DA /* controller_pokemonmini.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B048411BD231BF00C81128 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B0485E1BD2325B00C81128 /* Controller-Preferences.plist in Resources */,
+				08B0485D1BD2325B00C81128 /* Controller-Mappings.plist in Resources */,
+				08B048611BD2325B00C81128 /* Keyboard-Mappings.plist in Resources */,
+				08B048601BD2325B00C81128 /* controller_studioii_mask.png in Resources */,
+				08B0485F1BD2325B00C81128 /* controller_studioii.png in Resources */,
+				08B048651BD2325B00C81128 /* studio_ii_library.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8483,6 +8580,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08B0483B1BD231BF00C81128 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B048631BD2325B00C81128 /* OEStudioIISystemResponder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1415540B1442B3B300A01683 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -9065,6 +9170,11 @@
 			isa = PBXTargetDependency;
 			target = 081A46251B95744A00565444 /* Pokemon mini */;
 			targetProxy = 081A462D1B9574B800565444 /* PBXContainerItemProxy */;
+		};
+		08B048671BD232A300C81128 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08B0483A1BD231BF00C81128 /* Studio II */;
+			targetProxy = 08B048661BD232A300C81128 /* PBXContainerItemProxy */;
 		};
 		1B6A25021430F8FB009F1CE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -9993,6 +10103,64 @@
 				INFOPLIST_FILE = "Pokemon mini/Pokemon mini-Info.plist";
 				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = oesystemplugin;
+			};
+			name = Release;
+		};
+		08B0484C1BD231BF00C81128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)-SDK/build/Debug",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Studio II/Studio II-Info.plist";
+				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = oesystemplugin;
+			};
+			name = Debug;
+		};
+		08B0484D1BD231BF00C81128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)-SDK/build/Debug",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Studio II/Studio II-Info.plist";
+				INSTALL_PATH = "\"$USER_LIBRARY_DIR/Application Support/OpenEmu/Systems\"";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = oesystemplugin;
@@ -12169,6 +12337,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		08B0484B1BD231BF00C81128 /* Build configuration list for PBXNativeTarget "Studio II" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B0484C1BD231BF00C81128 /* Debug */,
+				08B0484D1BD231BF00C81128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1415541A1442B3B300A01683 /* Build configuration list for PBXNativeTarget "N64" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -12266,6 +12443,7 @@
 				87DF05031BCE2D100060E2C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9405539117A34C6B009B505D /* Build configuration list for PBXNativeTarget "PC Engine CD" */ = {
 			isa = XCConfigurationList;

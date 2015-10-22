@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OEStudioIIButton0</key>
+	<integer>4</integer>
+	<key>OEStudioIIButton2</key>
+	<integer>82</integer>
+	<key>OEStudioIIButton4</key>
+	<integer>80</integer>
+	<key>OEStudioIIButton5</key>
+	<integer>22</integer>
+	<key>OEStudioIIButton6</key>
+	<integer>79</integer>
+	<key>OEStudioIIButton8</key>
+	<integer>81</integer>
+	<key>OEStudioIIButtonClear</key>
+	<integer>45</integer>
+</dict>
+</plist>

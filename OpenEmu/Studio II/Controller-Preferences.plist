@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OEControllerImageKey</key>
+	<string>controller_studioii</string>
+	<key>OEControllerImageMaskKey</key>
+	<string>controller_studioii_mask</string>
+	<key>OEControllerKeyPositionKey</key>
+	<dict>
+		<key>OEStudioIIButton0</key>
+		<string>{251, 140}</string>
+		<key>OEStudioIIButton1</key>
+		<string>{251, 95}</string>
+		<key>OEStudioIIButton2</key>
+		<string>{228, 118}</string>
+		<key>OEStudioIIButton3</key>
+		<string>{273, 118}</string>
+		<key>OEStudioIIButton4</key>
+		<string>{170, 300}</string>
+		<key>OEStudioIIButton5</key>
+		<string>{170, 250}</string>
+		<key>OEStudioIIButton6</key>
+		<string>{334, 250}</string>
+		<key>OEStudioIIButton7</key>
+		<string>{212, 332}</string>
+		<key>OEStudioIIButton8</key>
+		<string>{250, 332}</string>
+		<key>OEStudioIIButton9</key>
+		<string>{288, 332}</string>
+		<key>OEStudioIIButtonClear</key>
+		<string>{212, 294}</string>
+	</dict>
+</dict>
+</plist>

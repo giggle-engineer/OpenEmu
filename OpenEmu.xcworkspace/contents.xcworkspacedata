@@ -74,6 +74,9 @@
       location = "group:Stella/Stella.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:STEM/STEM.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TwoMbit/TwoMbit.xcodeproj">
    </FileRef>
    <FileRef
