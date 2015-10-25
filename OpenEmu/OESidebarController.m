@@ -105,17 +105,21 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
 
     OESidebarCell *cell = [[OESidebarCell alloc] init];
     [cell setThemeKey:@"sidebar"];
-    [[sidebarView tableColumns] enumerateObjectsUsingBlock:^(NSTableColumn *column, NSUInteger idx, BOOL *stop) {
+    for(NSTableColumn *column in [sidebarView tableColumns])
+    {
         [column setDataCell:cell];
-    }];
+    }
     [cell setEditable:YES];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(controlTextDidEndEditing:) name:NSControlTextDidEndEditingNotification object:cell];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(controlTextDidBeginEditing:) name:NSControlTextDidBeginEditingNotification object:cell];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(libraryLocationDidChange:) name:OELibraryLocationDidChangeNotificationName object:nil];
+    
+    NSNotificationCenter *defaults = [NSNotificationCenter defaultCenter];
+    
+    [defaults addObserver:self selector:@selector(controlTextDidEndEditing:) name:NSControlTextDidEndEditingNotification object:cell];
+    [defaults addObserver:self selector:@selector(controlTextDidBeginEditing:) name:NSControlTextDidBeginEditingNotification object:cell];
+    
+    [defaults addObserver:self selector:@selector(libraryLocationDidChange:) name:OELibraryLocationDidChangeNotificationName object:nil];
 
     [sidebarView setIndentationPerLevel:7];
+    [sidebarView setIntercellSpacing:NSMakeSize(0, 4)];
     [sidebarView setAutosaveName:@"sidebarView"];
     [sidebarView setAutoresizesOutlineColumn:NO];
     [sidebarView registerForDraggedTypes:[NSArray arrayWithObjects:OEPasteboardTypeGame, NSFilenamesPboardType, nil]];
@@ -133,10 +137,10 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
     else
         [sidebarView setBackgroundColor:[NSColor colorWithDeviceWhite:0.19 alpha:1.0]];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadDataAndPreserveSelection) name:OEDBSystemsDidChangeNotification object:nil];
+    [defaults addObserver:self selector:@selector(reloadDataAndPreserveSelection) name:OEDBSystemsDidChangeNotification object:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidAppear:) name:OEStorageDeviceDidAppearNotificationName object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidDisappear:) name:OEStorageDeviceDidDisappearNotificationName object:nil];
+    [defaults addObserver:self selector:@selector(deviceDidAppear:) name:OEStorageDeviceDidAppearNotificationName object:nil];
+    [defaults addObserver:self selector:@selector(deviceDidDisappear:) name:OEStorageDeviceDidDisappearNotificationName object:nil];
 
     id viewsNextResponder = [[self view] nextResponder];
     if(viewsNextResponder != self)
@@ -284,7 +288,6 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
 - (id<OESidebarItem>)selectedSidebarItem
 {
     id<OESidebarItem> item = [[self view] itemAtRow:[[self view] selectedRow]];
-
     NSAssert(item==nil || [item conformsToProtocol:@protocol(OESidebarItem)], @"All sidebar items must conform to OESidebarItem");
 
     return item;
@@ -293,8 +296,8 @@ NSString * const OEMainViewMinWidth = @"mainViewMinWidth";
 - (void)changeDefaultCore:(id)sender
 {
     NSDictionary *data = [sender representedObject];
-    NSString *systemIdentifier = [data objectForKey:@"system"];
-    NSString *coreIdentifier   = [data objectForKey:@"core"];
+    NSString *systemIdentifier = data[@"system"];
+    NSString *coreIdentifier   = data[@"core"];
 
     NSString *defaultCoreKey = [NSString stringWithFormat:@"defaultCore.%@", systemIdentifier];
     [[NSUserDefaults standardUserDefaults] setObject:coreIdentifier forKey:defaultCoreKey];

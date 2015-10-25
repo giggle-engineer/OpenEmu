@@ -69,8 +69,19 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
 {
     [super loadView];
 
-    [[self listView] bind:@"selectionIndexes" toObject:gamesController withKeyPath:@"selectionIndexes" options:@{}];
     [[self listView] setDraggingSourceOperationMask:NSDragOperationCopy forLocal:NO];
+}
+
+- (void)viewDidAppear
+{
+    [super viewDidAppear];
+    [[self listView] bind:@"selectionIndexes" toObject:gamesController withKeyPath:@"selectionIndexes" options:@{}];
+}
+
+- (void)viewDidDisappear
+{
+    [super viewDidDisappear];
+    [[self listView] unbind:@"selectionIndexes"];
 }
 
 - (void)setLibraryController:(OELibraryController *)libraryController
@@ -129,7 +140,6 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
 
 - (void)dealloc
 {
-    [[self listView] unbind:@"selectionIndexes"];
     gamesController = nil;
 }
 #pragma mark - Selection
@@ -163,7 +173,7 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
 {
     [super setRepresentedObject:representedObject];
 
-    [[[self libraryController] toolbarSearchField] setSearchMenuTemplate:nil];
+    [[[[self libraryController] toolbar] searchField] setSearchMenuTemplate:nil];
 
     NSAssert([representedObject conformsToProtocol:@protocol(OEGameCollectionViewItemProtocol)], @"");
 
@@ -302,12 +312,13 @@ extern NSString * const OEGameControlsBarCanDeleteSaveStatesKey;
 - (void)makeNewCollectionWithSelectedGames:(id)sender
 {
     OECoreDataMainThreadAssertion();
-
+/*
     NSArray *selectedGames = [self selectedGames];
     OEDBCollection *collection = [[[self libraryController] sidebarController] addCollection:NO];
     [collection setGames:[NSSet setWithArray:selectedGames]];
     [collection save];
     [self setNeedsReload];
+ */
 }
 
 - (void)addSelectedGamesToCollection:(id)sender
