@@ -54,7 +54,6 @@
 #import "OESetupAssistant.h"
 #import "OECollectionViewController.h"
 #import "OEGameViewController.h"
-#import "OERetrodeDeviceManager.h"
 #import "OEGridGameCell.h"
 #import "OEGameView.h"
 #import "OEGameViewNotificationRenderer.h"
@@ -64,12 +63,16 @@
 #import "OEImportOperation.h"
 #import "OEPrefBiosController.h"
 #import "OEMainWindowController.h"
+#import "OELibraryGamesViewController.h"
+#import "OEGameScannerViewController.h"
+#import "OEDBSavedGamesMedia.h"
 @interface OELibraryDatabase (Private)
 - (void)OE_createInitialItems;
 @end
 
 @interface OEPrefDebugController () <NSTableViewDelegate, NSTableViewDataSource>
 @property NSArray *keyDescriptions;
+@property (nonatomic, readonly) NSWindow *mainWindow;
 @end
 
 NSString * const  CheckboxType  = @"Checkbox";
@@ -152,10 +155,13 @@ NSString * const OptionsKey = @"options";
                               Group(@"Library Window"),
                               Button(@"Reset main window size", @selector(resetMainWindow:)),
                               NCheckbox(OEMenuOptionsStyleKey, @"Dark GridView context menu"),
-                              Checkbox(OERetrodeSupportEnabledKey, @"Enable Retrode support"),
                               Checkbox(OECoverGridViewAutoDownloadEnabledKey, @"Download missing artwork on the fly"),
                               Checkbox(OEDisplayGameTitle, @"Show game titles instead of rom names"),
                               Checkbox(OEImportManualSystems, @"Manually choose system on import"),
+                              Checkbox(OEDBSavedGamesMediaShowsAutoSaves, @"Show autosave states in save state category"),
+                              Checkbox(OEDBSavedGamesMediaShowsQuickSaves, @"Show quicksave states in save state category"),
+                              Button(@"Show game scanner view", @selector(showGameScannerView:)),
+                              Button(@"Hide game scanner view", @selector(hideGameScannerView:)),
 
                               Group(@"HUD Bar / Gameplay"),
                               NCheckbox(OEDontShowGameTitleInWindowKey, @"Use game name as window title"),
@@ -206,6 +212,20 @@ NSString * const OptionsKey = @"options";
                               ];
 }
 
+#pragma mark - Retrieving The Main Window
+- (NSWindow *)mainWindow
+{
+    for (NSWindow *window in NSApp.windows)
+    {
+        if([window.windowController isKindOfClass:[OEMainWindowController class]])
+        {
+            return window;
+        }
+    }
+    
+    return nil;
+}
+
 #pragma mark - Actions
 - (void)changeRegion:(NSPopUpButton*)sender
 {
@@ -238,20 +258,36 @@ NSString * const OptionsKey = @"options";
     [defaults removeObjectForKey:@"NSSplitView Subview Frames mainSplitView"];
     [defaults removeObjectForKey:@"NSWindow Frame LibraryWindow"];
 
-    for(NSWindow *window in [NSApp windows])
+    NSWindow *mainWindow = self.mainWindow;
+    
+    // Matches the content size specified in MainWindow.xib.
+    [mainWindow setFrame:NSMakeRect(0, 0, 830, 555 + 22) display:NO];
+    
+    [mainWindow center];
+}
+
+- (void)showGameScannerView:(id)sender {
+    
+    OEMainWindowController *mainWindowController = self.mainWindow.windowController;
+    id <OELibrarySubviewController> currentViewController = mainWindowController.libraryController.currentViewController;
+    
+    if([currentViewController isKindOfClass:[OELibraryGamesViewController class]])
     {
-        if([[window windowController] isKindOfClass:[OEMainWindowController class]])
-        {
-            // Matches the content size specified in MainWindow.xib.
-            [window setFrame:NSMakeRect(0, 0, 830, 555 + 22) display:NO];
-            
-            [window center];
-            
-            break;
-        }
+        [((OELibraryGamesViewController *)currentViewController).gameScannerController showGameScannerViewAnimated:YES];
     }
 }
- 
+
+- (void)hideGameScannerView:(id)sender {
+    
+    OEMainWindowController *mainWindowController = self.mainWindow.windowController;
+    id <OELibrarySubviewController> currentViewController = mainWindowController.libraryController.currentViewController;
+    
+    if([currentViewController isKindOfClass:[OELibraryGamesViewController class]])
+    {
+        [((OELibraryGamesViewController *)currentViewController).gameScannerController hideGameScannerViewAnimated:YES];
+    }
+}
+
 #pragma mark -
 - (void)restoreSaveStatesDirectory:(id)sender
 {

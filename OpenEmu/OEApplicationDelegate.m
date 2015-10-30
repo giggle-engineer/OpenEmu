@@ -61,12 +61,11 @@
 #import <OpenEmuSystem/OpenEmuSystem.h>
 #import "OEToolTipManager.h"
 
-#import "OERetrodeDeviceManager.h"
-
 #import <OpenEmuXPCCommunicator/OpenEmuXPCCommunicator.h>
 #import <objc/message.h>
 
 #import "OEDBSaveState.h"
+#import "OEDBSavedGamesMedia.h"
 #import "OELibraryMigrator.h"
 
 NSString *const OEWebSiteURL      = @"http://openemu.org/";
@@ -134,6 +133,9 @@ static void *const _OEApplicationDelegateAllPluginsContext = (void *)&_OEApplica
                                           OEBackgroundPauseKey : @YES,
                                               @"logsHIDEvents" : @NO,
                                     @"logsHIDEventsNoKeyboard" : @NO,
+
+                             OEDBSavedGamesMediaShowsAutoSaves : @YES,
+                            OEDBSavedGamesMediaShowsQuickSaves : @YES,
          }];
 
         [OEControllerDescription class];
@@ -229,11 +231,6 @@ static void *const _OEApplicationDelegateAllPluginsContext = (void *)&_OEApplica
 
          [[[self currentGameDocument] gameSystemResponder] handleHIDEvent:event];
      }];
-
-    // Start retrode support
-    if([[NSUserDefaults standardUserDefaults] boolForKey:OERetrodeSupportEnabledKey])
-        [OERetrodeDeviceManager class];
-
 
     [[self startupQueue] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         void(^block)(void) = obj;
