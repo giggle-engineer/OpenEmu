@@ -33,6 +33,7 @@
 #import "OEButton.h"
 #import "OELibraryToolbar.h"
 extern NSString * const OELibraryStatesKey;
+extern NSString * const OELibraryLastCategoryKey;
 
 @class OELibraryDatabase;
 @class OESidebarController;
@@ -71,7 +72,7 @@ extern NSString * const OELibraryStatesKey;
 
 #pragma mark - Properties
 @property (strong) OELibraryDatabase *database;
-@property (nonatomic, readonly) NSViewController <OELibrarySubviewController> *currentViewController;
+@property (nonatomic, readonly) NSViewController <OELibrarySubviewController> *currentSubviewController;
 @property (strong) IBOutlet OELibraryToolbar *toolbar;
 @end
 
